@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+
+.font{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
+  font-family: "Lexend", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  color: #ffff;
+  font-style: normal;
+}
+ 
+ body{
+ 	display: flex;
+ 	justify-content:center;
+ 	background: #0C0C0C;
+ 	align-items: center;
+ 	min-height: 100vh;
+}
+.btn{
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	font-size: 1.5vh;
+	justify-content: center;
+	align-items: center;
+	text-shadow: white 0 0 15px;
+	flex-direction: column;
+	gap: 20px ;
+}
+
+.btn .play 
+{
+	position: relative;
+	width: 10vh;
+	height: 10vh;
+	background-color: #31363F;
+	border-radius: 50%;
+	filter: blur(1px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0  0px 50px #EEEEEE;
+	transition: 0.5s;
+
+}
+
+.btn.active .play
+{
+	box-shadow: 0 0 0 150vh #1111
+
+}
+.btn .play::before
+{
+	content: "";
+	position: absolute;
+	border: 25px solid #EEEEEE;
+    border-top: 15px solid transparent;
+	border-bottom:  15px solid transparent;
+	border-right: 0px solid transparent;
+	transform: translateX(5px);
+}
+.btn p
+{
+     font-family: "Lexend", sans-serif;
+ 	 font-family: "Lexend", sans-serif;
+ 	 font-optical-sizing: auto;
+	 font-weight: 200;
+ 	 font-style: normal;
+ 	 align-items: center;
+     color:  #EEEEEE;
+	 letter-spacing: 10px;
+	 text-shadow: #EEEEEE 0 0 0 5px;
+
+}	 
+.video{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 10000;
+}
+.video.active
+{
+	transition-delay: 0.2s;
+	transform: translate(-50%, -50%) scale(1);
+}
+.video video
+{
+	max-width: 900px;
+	outline: none;
+	border-radius: 10px;
+
+
+}.close
+{
+	justify-items: left;
+	color: #ffff;
+	letter-spacing: 5px;
+}
+
+.video .close{
+	position: absolute;
+	top: 30px;
+}
+@media (max-width: 991px)
+{
+	.video video
+	{
+		max-width: 80%
+	}
+}

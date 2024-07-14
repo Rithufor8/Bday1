@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8>
+	<meta name="viewport content="width=device-width, initial-scale=1.0">
+	<title>Project-R</title>
+	<link rel="stylesheet" href="css/prince.css">
+</head>
+
+
+<body>
+   <div class="btn">
+	  <div class="play"> </div>
+	  <p>Reveal</p>
+
+   </div>
+   <div class="video">
+   	<video src="videos/Special.mp4" controls>
+   	</video>   	
+   	<b class="close">CLOSE</b>
+   </div>
+
+
+
+
+ <script>
+  let btn = document.querySelector('.btn');
+  let video = document.querySelector('.video');
+  let close = document.querySelector('.close');
+  btn.onclick = function(){
+  	btn.classList.add('active');
+  	video.classList.add('active');
+  	video.play();
+  	}
+  	 close.onclick = function(){
+  	btn.classList.remove('active');
+  	video.classList.remove('active');
+  	video.pause();
+  }
+
+  </script>
+
+	  
+</body>
+</html>
